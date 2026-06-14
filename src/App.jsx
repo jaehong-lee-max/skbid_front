@@ -9,6 +9,12 @@ import Login from "./pages/login";
 import Dashboard from "./pages/dashboard";
 import CreateCampaign from "./pages/createCampaign";
 import CampaignList from "./pages/campaignList";
+import CallList from "./pages/callList";
+import PotentialClientList from "./pages/potentialClientList";
+import LeadManagement from "./pages/leadManagement";
+import AdminList from "./pages/adminList";
+import CreateAdmin from "./pages/createAdmin";
+import ScriptTemplate from "./pages/scriptTemplate";
 
 function App() {
   const navigate = useNavigate();
@@ -33,6 +39,12 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/campaign_list" element={<CampaignList />} />
         <Route path="/create_campaign" element={<CreateCampaign />} />
+        <Route path="/call_list" element={<CallList />} />
+        <Route path="/potential_client" element={<PotentialClientList />} />
+        <Route path="/lead_management" element={<LeadManagement />} />
+        <Route path="/admin_list" element={<AdminList />} />
+        <Route path="/create_admin" element={<CreateAdmin />} />
+        <Route path="/script_template" element={<ScriptTemplate />} />
       </Routes>
     </div>
   );

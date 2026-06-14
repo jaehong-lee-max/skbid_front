@@ -10,6 +10,35 @@ function SideBar() {
     setActiveMenu(activeMenu === menu ? null : menu);
   };
 
+  useEffect(() => {
+    if (
+      location.pathname === "/campaign_list" ||
+      location.pathname === "/create_campaign"
+    ) {
+      toggleMenu("campaign");
+    }
+
+    if (location.pathname === "/call_list") {
+      toggleMenu("call");
+    }
+
+    if (location.pathname === "/potential_client") {
+      toggleMenu("client");
+    }
+    if (location.pathname === "/lead_management") {
+      toggleMenu("client");
+    }
+    if (location.pathname === "/admin_list") {
+      toggleMenu("admins");
+    }
+    if (location.pathname === "/create_admin") {
+      toggleMenu("admins");
+    }
+    if (location.pathname === "/script_template") {
+      toggleMenu("settings");
+    }
+  }, []);
+
   return (
     <>
       <aside className="side_bar">
@@ -57,8 +86,13 @@ function SideBar() {
             통화 로그
           </div>
           <div className="mother_wrap">
-            <Link to="/">통화 목록</Link>
-            <Link to="/">통화 상세</Link>
+            <Link
+              to="/call_list"
+              className={location.pathname === "/call_list" ? "active" : ""}
+            >
+              통화 목록
+            </Link>
+            {/* <Link to="/">통화 상세</Link> */}
           </div>
           <div
             className={`mother ${activeMenu === "client" ? "active" : ""}`}
@@ -67,8 +101,22 @@ function SideBar() {
             <div className="lnb_icon_04"></div>관심고객 관리
           </div>
           <div className="mother_wrap">
-            <Link to="/">관심고객 목록</Link>
-            <Link to="/">리드 관리</Link>
+            <Link
+              to="/potential_client"
+              className={
+                location.pathname === "/potential_client" ? "active" : ""
+              }
+            >
+              관심고객 목록
+            </Link>
+            <Link
+              to="/lead_management"
+              className={
+                location.pathname === "/lead_management" ? "active" : ""
+              }
+            >
+              리드 관리
+            </Link>
           </div>
           <div
             className={`mother ${activeMenu === "admins" ? "active" : ""}`}
@@ -77,8 +125,18 @@ function SideBar() {
             <div className="lnb_icon_05"></div>관리자 관리
           </div>
           <div className="mother_wrap">
-            <Link to="/">관리자 목록</Link>
-            <Link to="/">권한 관리</Link>
+            <Link
+              to="/admin_list"
+              className={location.pathname === "/admin_list" ? "active" : ""}
+            >
+              관리자 목록
+            </Link>
+            <Link
+              to="/create_admin"
+              className={location.pathname === "/create_admin" ? "active" : ""}
+            >
+              관리자 생성
+            </Link>
           </div>
           <div
             className={`mother ${activeMenu === "settings" ? "active" : ""}`}
@@ -87,7 +145,14 @@ function SideBar() {
             <div className="lnb_icon_06"></div>설정
           </div>
           <div className="mother_wrap">
-            <Link to="/">스크립트 템플릿</Link>
+            <Link
+              to="/script_template"
+              className={
+                location.pathname === "/script_template" ? "active" : ""
+              }
+            >
+              스크립트 템플릿
+            </Link>
             <Link to="/">발신 번호 관리</Link>
             <Link to="/">시스템 설정</Link>
           </div>

@@ -944,7 +944,7 @@ table td {
   border: 1px solid #d4d4d4;
   background: white;
   padding: 10px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: normal;
   text-align: center;
 }
@@ -962,4 +962,325 @@ table td button {
 }
 table tr:hover td {
   background: #e9edf7;
+}
+
+.popup_wrap {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup {
+  width: 600px;
+  height: 700px;
+  background: white;
+  position: relative;
+  padding: 40px;
+  padding-top: 80px;
+}
+.popup .popup_tit {
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid #d4d4d4;
+  font-size: 15px;
+  font-weight: bold;
+  color: black;
+  padding-left: 20px;
+  line-height: 40px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.popup .popup_tit .popup_close {
+  position: absolute;
+  width: 40px;
+  height: 39px;
+  line-height: 39px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: normal;
+  color: black;
+  cursor: pointer;
+  right: 0px;
+  top: 0px;
+  border-left: 1px solid #d4d4d4;
+}
+.popup .popup_tit .popup_close:hover {
+  background: #f4f4f4;
+}
+.popup input[type="text"] {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #d4d4d4;
+  padding-left: 10px;
+  font-size: 14px;
+  font-weight: normal;
+  color: black;
+  margin-bottom: 10px;
+}
+.popup select {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #d4d4d4;
+  padding-left: 10px;
+  font-size: 14px;
+  font-weight: normal;
+  color: black;
+  margin-bottom: 10px;
+  padding-right: 40px;
+}
+.popup button {
+  width: 120px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.popup textarea {
+  width: 100%;
+  height: 200px;
+  padding: 14px;
+  font-weight: normal;
+  color: black;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  resize: none;
+  margin-bottom: 10px;
+  border: 1px solid #d4d4d4;
+}
+.popup .button_area {
+  width: 100%;
+  text-align: center;
+  height: auto;
+  margin-top: 20px;
+}
+.popup .talk_log {
+  width: 100%;
+  height: 400px;
+  overflow: auto;
+  border: 1px solid #d4d4d4;
+  position: relative;
+  padding: 20px;
+}
+.popup .talk_log ul {
+  display: block;
+  padding: 0px;
+}
+.popup .talk_log ul li {
+  display: block;
+  height: auto;
+  line-height: 20px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  color: black;
+}
+.popup .talk_log ul li span {
+  color: #1954d9;
+}
+
+.checks {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 0px;
+  height: 20px;
+  margin-top: 0px;
+  line-height: 20px;
+}
+.checks input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.checks input[type="checkbox"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.checks input[type="radio"] + label {
+  display: inline-block;
+  position: relative;
+  padding-left: 33px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  color: #000;
+  font-weight: 600;
+  font-size: 15px;
+  text-align: left;
+
+  padding-top: 4px;
+  margin-right: 40px;
+}
+.checks input[type="checkbox"] + label {
+  display: inline-block;
+  position: relative;
+  padding-left: 33px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  color: #000;
+  font-weight: 600;
+  font-size: 15px;
+  text-align: left;
+
+  padding-top: 4px;
+  margin-right: 40px;
+}
+.checks input[type="radio"] + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  background: url("./assets/cc.png") no-repeat;
+  background-size: 100% 100%;
+  border: 0px solid #d3d5e1;
+  border-radius: 5px;
+  box-shadow: none;
+  display: block;
+}
+.checks input[type="checkbox"] + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  background: url("./assets/cc2.png") no-repeat;
+  background-size: 100% 100%;
+  border: 0px solid #d3d5e1;
+  border-radius: 5px;
+  box-shadow: none;
+}
+.checks input[type="radio"] + label:active:before,
+.checks input[type="checkbox"]:checked + label:active:before {
+  box-shadow: none;
+}
+.checks input[type="radio"] + label {
+  margin-top: 0px;
+}
+.checks input[type="checkbox"] + label {
+  margin-top: 0px;
+}
+.checks input[type="radio"]:checked + label:before {
+  background: url("./assets/Checkbox.png") no-repeat;
+  background-size: 100% 100%;
+}
+.checks input[type="checkbox"]:checked + label:before {
+  background: url("./assets/Checkbox2.png") no-repeat;
+  background-size: 100% 100%;
+}
+.checks input[type="radio"]:checked + label:after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  background: none;
+  border-radius: 50%;
+  box-shadow: none;
+  display: block;
+}
+.checks input[type="checkbox"]:checked + label:after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  background: none;
+  border-radius: 50%;
+  box-shadow: none;
+  display: block;
+}
+table td .checks input[type="checkbox"] + label {
+  padding-top: 0px !important;
+  margin-top: -6px !important;
+  vertical-align: top;
+}
+
+table td .checks {
+  line-height: 0px !important;
+}
+
+table th .checks input[type="checkbox"] + label {
+  padding-top: 0px !important;
+  margin-top: -6px !important;
+  vertical-align: top;
+}
+
+table th .checks {
+  line-height: 0px !important;
+}
+.btn_control select {
+  width: 200px;
+  height: 32px;
+  border: 1px solid #d4d4d4;
+  background: white;
+  margin-right: 10px;
+  padding-left: 10px;
+}
+
+.big_tab {
+  width: 600px;
+  height: 40px;
+  margin-bottom: 70px;
+  position: relative;
+  border: 1px solid #d4d4d4;
+}
+.big_tab .big_tab_cell {
+  width: 50%;
+  float: left;
+  border-right: 1px solid #d4d4d4;
+  border-bottom: 1px solid #d4d4d4;
+  background: #f4f4f4;
+  color: black;
+  text-align: center;
+  line-height: 39px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.big_tab .big_tab_cell:last-of-type {
+  border-right: 0px solid #d4d4d4;
+}
+.big_tab .big_tab_cell.ac {
+  width: 50%;
+  border-right: 1px solid #d4d4d4;
+  border-bottom: 1px solid #f8f9fc;
+  background: #f8f9fc;
+  border-top: 2px solid #1954d9;
+  margin-top: -1px;
+  color: #1954d9;
+  font-weight: bold;
+}
+
+table.with_grid th {
+  background: transparent !important;
+}
+table.with_grid td {
+  background: transparent !important;
 }
