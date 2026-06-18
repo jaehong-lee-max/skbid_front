@@ -37,6 +37,9 @@ function SideBar() {
     if (location.pathname === "/script_template") {
       toggleMenu("settings");
     }
+    if (location.pathname === "/call_to_management") {
+      toggleMenu("settings");
+    }
   }, []);
 
   return (
@@ -153,7 +156,14 @@ function SideBar() {
             >
               스크립트 템플릿
             </Link>
-            <Link to="/">발신 번호 관리</Link>
+            <Link
+              to="/call_to_management"
+              className={
+                location.pathname === "/call_to_management" ? "active" : ""
+              }
+            >
+              발신 대상 관리
+            </Link>
             <Link to="/">시스템 설정</Link>
           </div>
         </div>

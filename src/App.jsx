@@ -15,6 +15,7 @@ import LeadManagement from "./pages/leadManagement";
 import AdminList from "./pages/adminList";
 import CreateAdmin from "./pages/createAdmin";
 import ScriptTemplate from "./pages/scriptTemplate";
+import CallToManagement from "./pages/callToManagement";
 
 function App() {
   const navigate = useNavigate();
@@ -45,6 +46,7 @@ function App() {
         <Route path="/admin_list" element={<AdminList />} />
         <Route path="/create_admin" element={<CreateAdmin />} />
         <Route path="/script_template" element={<ScriptTemplate />} />
+        <Route path="/call_to_management" element={<CallToManagement />} />
       </Routes>
     </div>
   );
