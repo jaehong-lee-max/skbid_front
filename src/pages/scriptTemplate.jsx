@@ -254,7 +254,7 @@ function ScriptTemplate() {
                 </th>
                 <th>스크립트 명</th>
                 <th>작성자</th>
-                <th>작성일</th>
+                <th>작성일1</th>
               </tr>
             </thead>
             <tbody>
