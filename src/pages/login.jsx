@@ -16,6 +16,7 @@ function Login() {
     api
       .post("/api/users/login", data)
       .then((response) => {
+        console.log(response.data);
         const { accessToken, refreshToken, user } = response.data;
 
         sessionStorage.setItem("accessToken", accessToken);
